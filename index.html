@@ -10,31 +10,37 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="/src/assets/css/animate.css">
     <link rel="stylesheet" href="/src/assets/css/sm.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.5.2/css/sm-extend.min.css">
     <style type="text/css" media="all">
-.fade-transition {
-  transition: opacity .3s ease;
-}
-.fade-enter, .fade-leave {
-  opacity: 0;
-}
+    .fade-transition {
+      transition: opacity .3s ease;
+    }
+    .fade-enter, .fade-leave {
+      opacity: 0;
+    }
     </style>
   </head>
-  <body >
+  <body class="theme-pink" >
     <div class="page">
-      <titleheader :title.sync="title"></titleheader>
-      <div class="content">
-        <router-view :title.sync="title"
-           transition="fade"
-           transition-mode="out-in">
-        </router-view>
-      </div>
+      <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left" v-on:click="goback">
+          <span class="icon icon-left"></span>
+          返回
+        </a>
+        <h1 class="title">{{title}}</h1>
+      </header>
+      <router-view :title.sync="title"
+         transition="fade"
+         transition-mode="out-in">
+      </router-view>
       <menu></menu>
     </div>
     <script src="dist/build.js"></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.5.2/js/sm-extend.min.js' charset='utf-8'></script>
     <script type="text/javascript" charset="utf-8">
-$(function() {
-  $.init()
-});
+      $(function() {
+        $.init()
+      });
     </script>
   </body>
 </html>

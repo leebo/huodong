@@ -7,9 +7,9 @@ var Menu = require('./components/shared/menu.vue')
 var Titleheader = require('./components/shared/titleheader.vue')
 var Zepto = require('../node_modules/zepto/zepto.min.js')
 require('./assets/js/sm.js')
-require('vue-resource')
 var VueRouter = require('vue-router')
 Vue.use(VueRouter)
+Vue.use(require('vue-resource'));
 var router = new VueRouter()
 var App = Vue.extend({
   data () {
@@ -17,9 +17,17 @@ var App = Vue.extend({
       title: "home"
     }
   },
+
   components: {
     menu: Menu,
     titleheader: Titleheader
+  },
+
+  methods: {
+    goback: function(){
+      this.$route.router.go(window.history.back())
+    }
+
   }
 })
 
