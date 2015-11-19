@@ -20,10 +20,15 @@
         <h1 class="title">我的生活</h1>
       </header>
       <div class="content">
-        <app></app>
+        <router-view></router-view>
       </div>
       <menu></menu>
     </div>
     <script src="dist/build.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    $(function() {
+      $.init()
+    });
+    </script>
   </body>
 </html>
