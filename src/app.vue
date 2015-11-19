@@ -1,13 +1,14 @@
 <template lang="jade">
 div
   h1 {{msg}}
+  hr
 </template>
 
 <script>
 export default {
   data () {
     return {
-      msg: 'Hello from vue-loader!'
+      msg: '测试'
     }
   },
   components: {
