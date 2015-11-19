@@ -1,6 +1,6 @@
 <template>
   <header class="bar bar-nav">
-    <a class="button button-link button-nav pull-left" href="/demos/card" data-transition='slide-out'>
+    <a class="button button-link button-nav pull-left" v-on:click="goback">
       <span class="icon icon-left"></span>
       返回
     </a>
@@ -14,6 +14,12 @@ export default {
   data () {
     return {
     }
+  },
+  methods: {
+    goback: function(){
+      this.$route.router.go(window.history.back())
+    }
+
   }
 }
 </script>
