@@ -10,14 +10,6 @@
     },
     {
       "post": {
-        "id": 1,
-        "title": "json-server",
-        "author": "typicode"
-      },
-      "id": 24
-    },
-    {
-      "post": {
         "title": "aa",
         "author": "bbb"
       },
