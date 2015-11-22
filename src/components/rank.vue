@@ -12,8 +12,8 @@
   <input v-model="new_post.author">
   <button v-on:click="save">Greet</button>
 </div>
-  <div class="content" style="padding-bottom: 50px" track-by="id" >
-  <div class="card demo-card-header-pic" transition="fade" v-for="post in posts | filterBy q in 'id' | orderBy 'id' -1 ">
+  <div class="content margin-bottom-lg">
+  <div class="card demo-card-header-pic" track-by="id" transition="fade" v-for="post in posts | filterBy q in 'id' | orderBy 'id' -1 ">
     <div valign="bottom" class="card-header color-white no-border no-padding">
       <img class='card-cover' src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" alt="">
     </div>
@@ -61,12 +61,7 @@ export default {
   ready: function(){
     this.title = "活动排行榜"
     var resource = this.$resource('http://192.168.1.130:3000/posts');
-    $(document).on('refresh', '.pull-to-refresh-content',function(e) {
-        resource.get(function(data, status, request){
-          this.posts = data
-          $.pullToRefreshDone('.pull-to-refresh-content');
-        })
-    })
+    $.hideIndicator()
   },
 
   methods: {
@@ -93,7 +88,6 @@ export default {
         transition.next({
           posts: data
         })
-        $.hideIndicator()
       })
     }
   }

@@ -1,13 +1,13 @@
 <template>
-<div class="content">
-  <div class="list-block">
+<div class="content margin-bottom-lg">
+  <div class="list-block margin-top-sm margin-bottom-sm">
     <ul>
       <li>
         <div class="item-content">
           <div class="item-inner">
             <div class="item-title label">姓名</div>
             <div class="item-input">
-              <input type="text" placeholder="Your name">
+              <input type="text" placeholder="请填写萌娃姓名">
             </div>
           </div>
         </div>
@@ -15,77 +15,29 @@
       <li>
         <div class="item-content">
           <div class="item-inner">
-            <div class="item-title label">邮箱</div>
+            <div class="item-title label">年龄</div>
             <div class="item-input">
-              <input type="email" placeholder="E-mail">
+              <input type="number" placeholder="请填写萌娃年龄">
             </div>
           </div>
         </div>
       </li>
-      <li>
+     <li class="align-top">
         <div class="item-content">
           <div class="item-inner">
-            <div class="item-title label">密码</div>
+            <div class="item-title label">参赛宣言</div>
             <div class="item-input">
-              <input type="password" placeholder="Password" class="">
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="item-content">
-          <div class="item-inner">
-            <div class="item-title label">性别</div>
-            <div class="item-input">
-              <select>
-                <option>Male</option>
-                <option>Female</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </li>
-      <!-- Date -->
-      <li>
-        <div class="item-content">
-          <div class="item-inner">
-            <div class="item-title label">生日</div>
-            <div class="item-input">
-              <input type="date" placeholder="Birth day" value="2014-04-30">
-            </div>
-          </div>
-        </div>
-      </li>
-      <!-- Switch (Checkbox) -->
-      <li>
-        <div class="item-content">
-          <div class="item-inner">
-            <div class="item-title label">开关</div>
-            <div class="item-input">
-              <div class="label-switch">
-                <input type="checkbox">
-                <div class="checkbox"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="align-top">
-        <div class="item-content">
-          <div class="item-inner">
-            <div class="item-title label">文本域</div>
-            <div class="item-input">
-              <textarea></textarea>
+              <textarea placeholder="请填写参赛宣言，五个字以上"></textarea>
             </div>
           </div>
         </div>
       </li>
     </ul>
   </div>
-  <div class="content-block">
+  <div class="content-block margin-top-0">
     <div class="row">
-      <div class="col-50"><a href="#" class="button button-big button-fill button-danger">取消</a></div>
-      <div class="col-50"><a href="#" class="button button-big button-fill button-success">提交</a></div>
+      <div class="col-50"><a href="#" class="button button-sm button-fill button-danger">取消</a></div>
+      <div class="col-50"><a href="#" class="button button-sm button-fill button-success">提交</a></div>
     </div>
   </div>
 </div>

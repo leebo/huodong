@@ -1,5 +1,5 @@
 <template>
-  <div>{{user}}</div>
+  <div class="content margin-bottom-lg">{{user}}</div>
 </template>
 
 <script>
