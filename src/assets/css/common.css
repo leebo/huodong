@@ -170,3 +170,9 @@
   line-height: 1.8rem;
 }
 
+.fade-transition {
+  transition: opacity .3s ease;
+}
+.fade-enter, .fade-leave {
+  opacity: 0;
+}

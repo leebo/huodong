@@ -1,17 +1,14 @@
 <template>
 <div>
-<div class="bar bar-header-secondary">
-  <div class="searchbar">
-    <a class="searchbar-cancel">取消</a>
-    <div class="search-input">
-      <label class="icon icon-search" for="search"></label>
-      <input type="search" v-model="q" id='search' placeholder='输入关键字...'/>
+  <div class="bar bar-header-secondary">
+    <div class="searchbar">
+      <a class="searchbar-cancel">取消</a>
+      <div class="search-input">
+        <label class="icon icon-search" for="search"></label>
+        <input type="search" v-model="q" id='search' placeholder='输入萌娃编号或姓名...'/>
+      </div>
     </div>
   </div>
-  <input v-model="new_post.title">
-  <input v-model="new_post.author">
-  <button v-on:click="save">Greet</button>
-</div>
   <div class="content margin-bottom-lg">
   <div class="card demo-card-header-pic" track-by="id" transition="fade" v-for="post in posts | filterBy q in 'id' | orderBy 'id' -1 ">
     <div valign="bottom" class="card-header color-white no-border no-padding">
@@ -29,7 +26,6 @@
     </div>
   </div>
  <!-- 加载提示符 -->
-  </div>
 </div>
 </template>
 

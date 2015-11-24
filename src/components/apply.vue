@@ -22,6 +22,16 @@
           </div>
         </div>
       </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label">联系电话</div>
+            <div class="item-input">
+              <input type="number" v-model="user.mobile" placeholder="请填写真实手机号码">
+            </div>
+          </div>
+        </div>
+      </li>
      <li class="align-top">
         <div class="item-content">
           <div class="item-inner">
