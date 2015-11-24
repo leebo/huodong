@@ -4,6 +4,7 @@ var Rank = require('./components/rank.vue')
 var Tips = require('./components/tips.vue')
 var Apply = require('./components/apply.vue')
 var Menu = require('./components/shared/menu.vue')
+var Util = require('./util.js')
 require('../node_modules/zepto/zepto.min.js')
 require('./assets/js/sm.js')
 var VueRouter = require('vue-router')
@@ -18,9 +19,18 @@ var App = Vue.extend({
   methods: {
     goback: function(){
       this.$route.router.go(window.history.back())
-    }
-  }
+    },
+  },
+
+  created: function(){
+  },
+
+  ready: function(){
+    Util.getOpenid()
+  },
+
 })
+
 
 $.init()
 

@@ -34,7 +34,7 @@
 </template>
 
 <script>
-// 添加'refresh'监听器
+var Util = require('../util.js')
 export default {
   props: ['title'],
   data () {
@@ -56,6 +56,30 @@ export default {
 
   created: function(){
     $.showIndicator()
+
+    Util.setWxConfig()
+
+    wx.ready(function () {
+      wx.onMenuShareAppMessage({
+        title: "rank",
+        desc: "testtetetstst",
+        link: "http://test.xj8.net/#!/apply",
+        imgUrl: '',
+        success: function () {
+          // 用户确认分享后执行的回调函数
+          alert("谢谢您的分享");
+        },
+      })
+
+      wx.onMenuShareTimeline({
+        title: "ttt1", // 分享标题
+        link: "http://www.baidu.com",
+        imgUrl: '',
+        success: function () {
+          alert("谢谢您的分享");
+        }
+      })
+    })
   },
 
   ready: function(){

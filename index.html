@@ -11,6 +11,26 @@
     <link rel="stylesheet" href="/src/assets/css/animate.css">
     <link rel="stylesheet" href="/src/assets/css/sm.css">
     <link rel="stylesheet" href="/src/assets/css/common.css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+    //只取一个：
+    var queryString=function(key){
+      return (document.location.search.match(new RegExp("(?:^\\?|&)"+key+"=(.*?)(?=&|$)"))||['',null])[1];
+    }
+    localStorage.removeItem("openid")
+
+    var openid = localStorage.getItem("openid");
+    var access_code = queryString('code')
+    if (openid == null) {
+      if (access_code == null)
+      {
+        var fromurl = location.href
+        var appid = "wxc0fc91552316d432"
+        var url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + encodeURIComponent(fromurl) + '&response_type=code&scope=snsapi_base#wechat_redirect'
+        location.href = url
+      }
+    }
+    </script>
     <style type="text/css" media="all">
     .fade-transition {
       transition: opacity .3s ease;
